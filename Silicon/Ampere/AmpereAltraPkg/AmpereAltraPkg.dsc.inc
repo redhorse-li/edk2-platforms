@@ -461,13 +461,6 @@
   gArmPlatformTokenSpaceGuid.PcdSerialDbgRegisterBase|0x100002620000
   gArmPlatformTokenSpaceGuid.PcdSerialDbgUartBaudRate|115200
 
-  #
-  # We want to use the Shell Libraries but don't want it to initialise
-  # automatically. We initialise the libraries when the command is called by the
-  # Shell.
-  #
-  gEfiShellPkgTokenSpaceGuid.PcdShellLibAutoInitialize|FALSE
-
   gEfiMdeModulePkgTokenSpaceGuid.PcdResetOnMemoryTypeInformationChange|FALSE
 
   #
@@ -834,6 +827,7 @@
   MdeModulePkg/Universal/SmbiosMeasurementDxe/SmbiosMeasurementDxe.inf
 !endif
 
+!if $(SHELL_ENABLE) == TRUE
   #
   # UEFI application (Shell Embedded Boot Loader)
   #
@@ -857,8 +851,12 @@
       gEfiMdePkgTokenSpaceGuid.PcdUefiLibMaxPrintBufferSize|8000
   }
 !ifdef $(INCLUDE_TFTP_COMMAND)
-  ShellPkg/DynamicCommand/TftpDynamicCommand/TftpDynamicCommand.inf
+  ShellPkg/DynamicCommand/TftpDynamicCommand/TftpDynamicCommand.inf {
+    <PcdsFixedAtBuild>
+      gEfiShellPkgTokenSpaceGuid.PcdShellLibAutoInitialize|FALSE
+  }
 !endif #$(INCLUDE_TFTP_COMMAND)
+!endif #$(EDK2_SHELL_ENABLE)
 
   EmbeddedPkg/Drivers/MemoryAttributeManagerDxe/MemoryAttributeManagerDxe.inf
   Silicon/Ampere/AmpereSiliconPkg/Drivers/PlatformBootManagerDxe/PlatformBootManagerDxe.inf
