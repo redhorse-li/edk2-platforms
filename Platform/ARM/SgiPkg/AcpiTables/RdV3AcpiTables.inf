@@ -43,6 +43,7 @@
   gArmPlatformTokenSpaceGuid.PcdCoreCount
   gArmPlatformTokenSpaceGuid.PcdClusterCount
 
+  gArmSgiTokenSpaceGuid.PcdDramBlock2AddrChip0
   gArmSgiTokenSpaceGuid.PcdGpioController0BaseAddress
   gArmSgiTokenSpaceGuid.PcdGpioController0Size
   gArmSgiTokenSpaceGuid.PcdGpioController0Interrupt

@@ -81,3 +81,8 @@
   gArmTokenSpaceGuid.PcdSystemMemoryBase|0x80000000
   gArmTokenSpaceGuid.PcdSystemMemorySize|0x7F000000
 
+  #Second DRAM Block Addresses
+  gArmSgiTokenSpaceGuid.PcdDramBlock2AddrChip0|0x008080000000
+  gArmSgiTokenSpaceGuid.PcdDramBlock2AddrChip1|0x408080000000
+  gArmSgiTokenSpaceGuid.PcdDramBlock2AddrChip2|0x808080000000
+  gArmSgiTokenSpaceGuid.PcdDramBlock2AddrChip3|0xC08080000000

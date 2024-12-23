@@ -54,6 +54,10 @@
   gArmTokenSpaceGuid.PcdSystemMemorySize
 
   gArmSgiTokenSpaceGuid.PcdChipCount
+  gArmSgiTokenSpaceGuid.PcdDramBlock2AddrChip0
+  gArmSgiTokenSpaceGuid.PcdDramBlock2AddrChip1
+  gArmSgiTokenSpaceGuid.PcdDramBlock2AddrChip2
+  gArmSgiTokenSpaceGuid.PcdDramBlock2AddrChip3
   gArmSgiTokenSpaceGuid.PcdDramBlock2Base
   gArmSgiTokenSpaceGuid.PcdDramBlock2Size
   gArmSgiTokenSpaceGuid.PcdGtFrame0Gsiv

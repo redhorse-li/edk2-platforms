@@ -336,6 +336,7 @@ InstallType7CacheInformation (
     break;
   case RdV2:
   case RdV3:
+  case RdV3Cfg2:
     /* L1 instruction cache */
     mArmRdSmbiosType7[0].Base.MaximumCacheSize2 = 64;    // 64KB
     mArmRdSmbiosType7[0].Base.InstalledSize2 = 64;       // 64KB
@@ -351,6 +352,24 @@ InstallType7CacheInformation (
     /* System level cache */
     mArmRdSmbiosType7[4].Base.MaximumCacheSize2 = 32768; // 32MB SLC
     mArmRdSmbiosType7[4].Base.InstalledSize2 = 32768;    // 32MB SLC
+    mArmRdSmbiosType7[4].Base.Associativity = CacheAssociativity16Way;
+    break;
+  case RdV3Cfg1:
+    /* L1 instruction cache */
+    mArmRdSmbiosType7[0].Base.MaximumCacheSize2 = 64;    // 64KB
+    mArmRdSmbiosType7[0].Base.InstalledSize2 = 64;       // 64KB
+    mArmRdSmbiosType7[0].Base.Associativity = CacheAssociativity4Way;
+    /* L1 data cache */
+    mArmRdSmbiosType7[1].Base.MaximumCacheSize2 = 64;    // 64KB
+    mArmRdSmbiosType7[1].Base.InstalledSize2 = 64;       // 64KB
+    mArmRdSmbiosType7[1].Base.Associativity = CacheAssociativity4Way;
+    /* L2 cache */
+    mArmRdSmbiosType7[2].Base.MaximumCacheSize2 = 2048;  // 2MB
+    mArmRdSmbiosType7[2].Base.InstalledSize2 = 2048;     // 2MB
+    mArmRdSmbiosType7[2].Base.Associativity = CacheAssociativity8Way;
+    /* System level cache */
+    mArmRdSmbiosType7[4].Base.MaximumCacheSize2 = 8192;  // 8MB SLC
+    mArmRdSmbiosType7[4].Base.InstalledSize2 = 8192;     // 8MB SLC
     mArmRdSmbiosType7[4].Base.Associativity = CacheAssociativity16Way;
     break;
   }

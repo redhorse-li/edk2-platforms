@@ -54,6 +54,7 @@
   gArmTokenSpaceGuid.PcdPciBusMin
   gArmTokenSpaceGuid.PcdPciBusMax
 
+  gArmSgiTokenSpaceGuid.PcdDramBlock2AddrChip0
   gArmSgiTokenSpaceGuid.PcdGpioController0BaseAddress
   gArmSgiTokenSpaceGuid.PcdGpioController0Size
   gArmSgiTokenSpaceGuid.PcdGpioController0Interrupt
